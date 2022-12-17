@@ -97,6 +97,9 @@ int main(int argc, char *argv[])
 	//nincfg.Config &= ~(NIN_CFG_USB|NIN_CFG_WIIU_WIDE|NIN_CFG_FORCE_WIDE);
 	strcpy(nincfg.GamePath,"di");
 
+	// Force VideoScale to Auto for Zelda Collectors Edition and OOT Master Quest support.
+	nincfg.VideoScale = 0;
+
 	// Set the Version based on the NIN_CFG that this application
 	// writes to memory instead of accepting the Version set in nincfg.bin
 	// to avoid situations where a truncated struct is written to memory
